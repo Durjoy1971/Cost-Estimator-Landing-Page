@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap");
 
 body {
-    margin: 0px;
+  margin: 0px;
   background-color: rgb(233, 223, 255);
   font-family: "Open Sans", sans-serif;
   display: flex;
@@ -118,6 +118,7 @@ h1 {
   text-transform: uppercase;
   margin: 16px 0;
   border-radius: 10px;
+  box-sizing: border-box;
 }
 
 .sessions-card p {
@@ -269,6 +270,64 @@ h1 {
   top: -24px;
   left: 0;
   width: 100%;
-border-top-left-radius: 10px;
-border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+@media only screen and (max-width:750px){
+  .card{
+    width: 100%;
+  }
+  .card-wrapper{
+    flex-wrap: wrap-reverse;
+  }
+  .sessions-card{
+    width: 80%;
+  }
+}
+@media only screen and (max-width:600px){
+  body{
+    padding: 16px;
+  }
+  h1 {
+    margin: 0 0 16px 0;
+  }
+  .container{
+    padding: 0 16px;
+  }
+  .sessions-card{
+    width: 100%;
+  }
+  .toogle-wrapper{
+    width: 90%;
+    justify-content: space-around;
+  }
+}
+@media only screen and (max-width:400px){
+  .tabs p{
+    padding: 3px;
+    font-size: 14px;
+  }
+  h1{
+    font-size: 28px;
+  }
+  .tabs .active::before {
+    content: "";
+    width: 80%;
+    height: 4px;
+    background-color: rgb(83, 49, 156);
+    position: absolute;
+    bottom: -32px;
+    left: 12%;
+    z-index: 2;
+    border-radius: 10px;
+  }
+
+  .description{
+    line-height: 20px;
+  }
+
+  .slider .scale ul li{
+    font-size: 15px;
+  }
 }
